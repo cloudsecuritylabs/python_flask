@@ -1,18 +1,5 @@
-<html>
-    <head>
-
-        {% if title%}
-        <h1>{{ title }}</h1>
-        {% else %}        
-        <h1>Posts</h1>
-        {% endif %}
-    
-    
-    </head>
-    <!-- This is an example of using Jinja2 template in python frontend.
-    posts variable consists of a dictionary whis is passed to the frontend from the backend code.
-    we can loop over the dictionary and print all the information.
-    -->
+{% extends "layout.html" %}
+{% block content %}
     {%for post in posts%}
 
         <h1>{{ post.title }}</h1>
@@ -20,4 +7,4 @@
         <p>{{ post.content }}</p>
 
     {% endfor %}
-</html>
+{% endblock content %}

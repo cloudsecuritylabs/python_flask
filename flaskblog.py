@@ -43,7 +43,7 @@ def hello():
 def about():
     name = request.args.get("name", "About me")
     #return f'<h1>Hello, {escape(name)}!</h1>'
-    return render_template('about.html')
+    return render_template('about.html', title='About the page')
 
 
 @app.route('/posts')

@@ -1,13 +1,4 @@
-<html>
-        <head>
-
-                {% if title %}
-                    <h1>{{ title }}</h1>
-                {% else %}        
-                    <h1>About</h1>
-                {% endif %}
-            
-            
-            </head>
-    <body>This page is for my kids</body>
-</html>
+{% extends "layout.html" %}
+{% block content %}
+    <p>This site is really for my kids and wife.</p>
+{% endblock content %}
